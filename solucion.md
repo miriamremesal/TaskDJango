@@ -33,7 +33,7 @@ DATABASES = {
 ```bash
 python manage.py migrate
 ```
-## 7. Iniciamos el servidor:
+## 7. Iniciamos el servidor (con el siguiente comando) y en el navegador escribimos la dirección http://127.0.0.1:8000/
 ```bash
 python manage.py runserver
 ```
