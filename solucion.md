@@ -50,7 +50,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'todolist.apps.ToDoListConfig',
+    'todolist',
 ]
 ```
-## 10. 
+## 10. En el archivo todolist/models.py definimos todos los objetos, es el lugar en el cual definiremos nuestra entrada del To Do List.
+## 11. Agregamos nuestro modelo a la bbdd:
+```bash
+ python manage.py makemigrations todolist
+ python manage.py migrate todolist
+```
+## 12. Creamos un admin modificando el fichero todolist/admin.py y ejecutando el comando:
+```bash
+python manage.py createsuperuser
+```
