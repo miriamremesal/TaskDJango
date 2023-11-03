@@ -1,7 +1,7 @@
 # Pasos para la creación de un proyecto en Python con DJango:
 
 ## 1. Creamos un nuevo entorno virtual y lo iniciamos:
-   ``` bash
+   ```bash
 python3 -m venv myvenv
 myvenv2\Scripts\activate
 ´´´
