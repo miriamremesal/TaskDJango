@@ -37,3 +37,20 @@ python manage.py migrate
 ```bash
 python manage.py runserver
 ```
+## 8. Creamos una aplicación separada dentro de nuestro proyecto:
+```bash
+python manage.py startapp todolist
+```
+## 9. Le decimos a DJango que utilice la aplicación creada. En settings tiene que quedar:
+```bash
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'todolist.apps.ToDoListConfig',
+]
+```
+## 10. 
