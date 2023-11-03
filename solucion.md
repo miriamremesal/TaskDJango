@@ -29,11 +29,11 @@ DATABASES = {
     }
 }
 ```
-## Ejecutamos la migración:
+## 6. Ejecutamos la migración:
 ```bash
 python manage.py migrate
 ```
-## E iniciamos el servidor:
+## 7. Iniciamos el servidor:
 ```bash
 python manage.py runserver
 ```
