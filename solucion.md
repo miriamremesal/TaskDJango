@@ -63,3 +63,48 @@ INSTALLED_APPS = [
 ```bash
 python manage.py createsuperuser
 ```
+## 13. En task, en la carpeta urls.py añadimos la path:
+```bash
+path('', include('todolist.urls')),
+```
+## 14. Y en todolist creamos un fichero urls.py que contenga:
+```bash
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('tasks/', views.task_list, name='task_list'),
+]
+```
+## 15. Ahora creamos las vistas. En la carpeta todolist, en el fichero views.py agregamos las siguientes líneas:
+```bash
+from django.shortcuts import render
+from .models import Task 
+
+def task_list(request):
+    task = Task.objects.all()
+    return render(request, 'todolist/task_list.html', {'task': task})
+```
+## 16. Vamos a crear ahora nuestra primera plantilla. Creamos una carpeta templates dentro de todolist, y otra carpeta todolist en la carpeta templates. Creamos un fichero task_list.html en esta última carpeta todolist.
+## 17. En el html añadimos:
+```bash
+<html>
+        <head>
+            <title>Task List</title>
+        </head>
+        <body>
+            <h1>Lista de Tareas</h1>
+            <ul>
+                {% for task in tasks %}
+                <li>
+                    <h2>{{ task.title }}</h2>
+                    <p>{{ task.description }} - {% if task.completed %} Sí {% else %} No {% endif %}</p>
+                </li>
+                {% empty %}
+                <p>No hay tareas por hacer.</p>
+                {% endfor %}
+            </ul>
+        </body>
+    </html>
+```
+## 18. Ya podemos añadir nuestras tareas!! :)
