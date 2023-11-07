@@ -2,7 +2,7 @@
 
 ## 1. Creamos un nuevo entorno virtual y lo iniciamos:
 ```bash
-python3 -m venv myvenv
+python3 -m venv myvenv2
 myvenv2\Scripts\activate
 ```
 ## 2. Creamos el .gitignore para que no nos suba el entorno virtual al repositorio
